@@ -6,10 +6,12 @@
 
 //Write a function to return the Discount Amount
 function find_DiscountAmount(item1,item2,disc_precent){
-return null
+    let disc1=item1-((item1*disc_precent)/100);
+    let disc2=item2-((item2*disc_precent)/100);
+return disc1+disc2;
 }
 
 //Write a function to return the discount percent
 function find_Discount(item1,item2,disc_precent){
-return null
+return parseFloat((item1+item2-find_DiscountAmount(item1,item2,disc_precent)).toFixed(1));
 }
